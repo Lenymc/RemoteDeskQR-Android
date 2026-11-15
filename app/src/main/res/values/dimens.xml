@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 默认（手机）：侧栏收起、单列卡片、紧凑尺寸 -->
+<resources>
+    <dimen name="top_bar_height">48dp</dimen>
+    <dimen name="tab_bar_height">28dp</dimen>
+    <dimen name="sidebar_width">0dp</dimen>
+    <dimen name="status_bar_height">32dp</dimen>
+    <dimen name="card_height">104dp</dimen>
+    <dimen name="card_min_width">210dp</dimen>
+    <dimen name="content_pad">12dp</dimen>
+    <dimen name="section_gap">12dp</dimen>
+    <dimen name="text_title">15sp</dimen>
+    <dimen name="text_body">12sp</dimen>
+    <dimen name="text_small">11sp</dimen>
+    <dimen name="button_height">34dp</dimen>
+</resources>

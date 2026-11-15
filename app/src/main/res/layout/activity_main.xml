@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  主框架只有一份；平板 HD 适配由 values-sw600dp / values-sw720dp 的尺寸资源
+  加上 MainActivity 里按 smallestScreenWidthDp 计算列数、侧栏显隐共同完成。
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/content">
+
+    <!-- 顶栏：左端标签，右端动作；标签栏与侧栏同一套深色 -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/top">
+
+        <TextView
+            android:id="@+id/app_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="14dp"
+            android:paddingRight="10dp"
+            android:text="会话"
+            android:textColor="@color/text_light"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:id="@+id/tab_scroll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:scrollbars="none">
+            <LinearLayout
+                android:id="@+id/tab_strip"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical" />
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/top_actions"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingRight="8dp" />
+    </LinearLayout>
+
+    <!-- 中部：侧栏 + 内容区 -->
+    <LinearLayout
+        android:id="@+id/middle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/sidebar"
+            android:layout_width="@dimen/sidebar_width"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/side"
+            android:paddingTop="0dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:id="@+id/session_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/side_actions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="6dp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/splitter"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/top" />
+
+        <FrameLayout
+            android:id="@+id/content_host"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/content" />
+    </LinearLayout>
+
+    <!-- 状态栏：结果只写在这一行，不弹窗 -->
+    <LinearLayout
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_bar_height"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/status_bg"
+        android:paddingLeft="12dp"
+        android:paddingRight="8dp">
+
+        <TextView
+            android:id="@+id/status_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="未连接"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_body" />
+
+        <LinearLayout
+            android:id="@+id/status_actions"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+</LinearLayout>

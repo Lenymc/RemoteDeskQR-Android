@@ -1,0 +1,31 @@
+# 构建中间产物与产物（APK 作为 Release 附件发布，不入库）
+/build/
+/dist/
+/build_out.log
+/build_out.txt
+*.idsig
+
+# 签名密钥含私钥，绝不入库
+/signing/
+
+# 第三方原生库源码 / 中间源码（约 290MB，按需用 setup_env / build_native 准备）
+/tools/freerdp-src/
+/tools/openssl-src/
+/tools/openssl-src.tar.gz
+/tools/ossl2/
+/tools/openssl-android/
+/tools/rdp-ref/
+/tools/rdp-test/
+/tools/newcaps.java.txt
+/tools/newcaps2.java.txt
+
+# 本地工作日志与会话记录（含内网拓扑 / 测试环境信息，不入库、不公开）
+/.workbuddy/
+
+# 供 GitHub 使用的干净快照（独立 git 仓库，仅一个初始提交，不关联远端）
+/github-snapshot/
+
+# 本地缓存
+__pycache__/
+*.pyc
+.DS_Store

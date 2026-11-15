@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="top">#FF232A3A</color>
+    <color name="top_alt">#FF2B3244</color>
+    <color name="side">#FF1F2532</color>
+    <color name="side_item">#FF2A3242</color>
+    <color name="content">#FFF4F6F9</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="status_bg">#FFEDF0F5</color>
+    <color name="text_dark">#FF2C3444</color>
+    <color name="text_light">#FFE7EBF3</color>
+    <color name="muted">#FF8A93A5</color>
+    <color name="accent">#FF2F6BFF</color>
+    <color name="accent_dim">#FF3B4A66</color>
+    <color name="ok">#FF16A34A</color>
+    <color name="fail">#FFDC2626</color>
+    <color name="warn">#FFF59E0B</color>
+    <color name="line">#FFDDE3EC</color>
+</resources>
