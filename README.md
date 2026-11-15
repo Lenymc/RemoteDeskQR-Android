@@ -1,6 +1,6 @@
 # RemoteDeskQR Android
 
-一款支持 HTTP / SOCKS 代理的 Android 远程桌面客户端，重点适配平板 HD 分辨率。
+一款支持HTTP/SOCKS代理的windows远程桌面客户端软件，重点适配平板 HD 分辨率。
 成品：`dist/RemoteDeskQR-1.0.apk`（已签名，minSdk 26 / targetSdk 33）。
 
 首次启动不预置任何主机、账号或口令：在「主页 → ＋ 新建连接」录入目标信息，
